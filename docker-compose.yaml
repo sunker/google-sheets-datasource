@@ -3,6 +3,8 @@ version: '3.0'
 services:
   grafana:
     container_name: 'grafana-googlesheets-datasource'
+    environment:
+      - GOOGLE_JWT_FILE=${GOOGLE_JWT_FILE}
     build:
       context: ./.config
       args:
